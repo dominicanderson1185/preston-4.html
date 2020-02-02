@@ -1,9 +1,3 @@
-
-body {
-	font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 header,
 footer {
 	background-color: #00BFFF;
@@ -12,117 +6,84 @@ footer {
 	align-items: center;
   padding: 10px;
 }
-
-header,
-nav,
-main,
-footer {
-	max-width: 900px;
-	margin: 0 auto;
-
+body {
+	background-color: AliceBlue;
+	font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-b {
-  font-size: 22px;
-    letter-spacing: 8px;
-
-}
-h2 {
-	color: #536878;
-}
-
-nav {
-  margin: 0 auto;
-	max-width: 760px;
-	background-color: blue;
-	text-align: center;
-	box-shadow: 0 5px 15px #00BFFF;
-}
-   .controlbar {
-	list-style: none;
-	padding: 0;
-}
-.controlbar li:first-child {
-	display: block;
-}
-.controlbar li {
-	display: none;
-}
-
-.responsive li {
-	display: block;
-}
-
-nav ul {
-	list-style-type: none;
-  margin: 0;
-	overflow: hidden;
-}
-nav li a {
-	display: block;
-  color: white;
-	text-align: center;
-	padding: 12px;
-	font-size: 12px;
-  
-}
-
-main article {
+ article {
   border: 1px solid #bbb;
 	padding: 0 1rem;
 	background-color: #DCDCDC;
   margin: 1rem;
 
 }
-
+header,
+nav,
+main,
 footer {
-  letter-spacing: 3px;
-	flex: 0 1 100%;
-	height: 2rem;
+	max-width: 900px;
+	margin: 0 auto;
 }
+b {
+  font-size: 22px;
+    letter-spacing: 8px;
 
-@media only screen and (min-width: 37.5em) {
-		nav ul { display: flex; }
-		nav ul li { flex: 1 1 100%; }
+}
+nav {
+	max-width: 900px;
+	background-color: blue;
+}
+.navigation {
+	margin: 0 ;
+	list-style: none;
+	padding: 0;
+	background-color: blue;
+	text-align: center;
+	box-shadow: 0 5px 15px #00BFFF;
+}
+.navigation li:first-child {
+	display: block;
+}
+.navigation li {
+	display: none;
+}
+.navigation a {
+	display: block;
+	color: #fff;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+}
+.navigation a:hover {
+	color: #000;
+	background-color: #fff;
 	
-	nav a {
-		font-size: 1rem;
-	}
-	main {
-		grid-template-columns: 1fr 1fr;
-	}
-	article:nth-child(3) {
-		grid-column: span 2;
-	}
-
 }
 
-@media only screen and (min-width: 65em) {
-	nav a {
-		font-size: 1rem;
-	}
-	main {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-  
-	article:nth-child(3) {
-		grid-column: span 1;
-	}
+/* the onclick JS toggles the .repsonsive class from display none (.navigation li) to display block because the repsonsive class is added to the end of the class list like this in HTML Line #6.
+  <ul class="navigation responsive">
+  */
+.responsive li {
+	display: block;
 }
-@media only screen and (min-width: 32.5em) {
-	.controlbar {
+
+/* Media Query for medium + screens */
+@media only screen and (min-width: 727px) {
+	.navigation {
 		display: flex;
 	}
-	.controlbar li {
-		display: block;
+	.navigation li {
+		display: block; /* needed because of state in small view */
 		flex: 1 1 100%;
 	}
-	.controlbar li a {
-		color: white;
+	.navigation li a {
+		color: yellow;
 		text-align: center;
 	}
 	
-	.controlbar li:first-child {
+	.navigation li:first-child {
 		display: none;
 	}
 }
