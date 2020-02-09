@@ -17,7 +17,23 @@ body {
 	padding: 0 1rem;
 	background-color: #DCDCDC;
   margin: 1rem;
+  
 
+}
+#sumpic {
+display: block;
+max-width: 100%;
+  padding-top: 10px;
+padding-bottom: 10px;
+
+  }
+article.inner{
+width: 10%;
+height: 75px;
+float:left;
+top: 200px;
+right: 1000px;
+position: absolute;
 }
 header,
 nav,
@@ -69,8 +85,11 @@ nav {
 	display: block;
 }
 
-/* Media Query for medium + screens */
-@media only screen and (min-width: 727px) {
+
+
+
+
+@media screen and (max-width: 600px) {
 	.navigation {
 		display: flex;
 	}
@@ -86,4 +105,13 @@ nav {
 	.navigation li:first-child {
 		display: none;
 	}
+  article.inner{
+    font-size:13px;
+    
+  }
+  article.forecast {
+    display: none;
+   
+    
+  }
 }
